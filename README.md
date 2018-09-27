@@ -1,10 +1,12 @@
 # Make_GT_boundingbox
 
+<img src='./box_checker_capture.png' width='950'>
+
 ----------
 ## Usage
 
 1. Load image (click the file button or keyboard shortcut "f")
-2. Draw a rectangle (click the Rect(Ins) button or keyboard shortcut "insert")
+2. Draw a rectangle (click the Rect button or keyboard shortcut "insert")
 3. Save the result (click the Save button or keyboard shortcut "space")
 4. Adjust the position and size of the ground truth target 
 
