@@ -40,7 +40,8 @@ Repeat progress...
 ### Run button
 * Rect(Ins) : find position by using your mouse (getrect function)
 * NaN(Del) : delete the present result 
-* (Home) : go to home
-* (End) : go to end (Last frame in which the result exists)
-* Prev(PgUp) : go to previous frame
-* Next(PgDn) : go to next frame
+* (Home) : go to home '[w/o save]'
+* (End) : go to end (Last frame in which the result exists) '[w/o save]'
+* Prev(PgUp) : go to the previous frame '[w/o save]'
+* Next(PgDn) : go to the next frame '[w/o save]'
+* Save(space) : save and go to the next frame
