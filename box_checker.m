@@ -540,6 +540,7 @@ global pathname;
 global full_frame;
 global present_rect;
 global present_img;
+global img_names;
 
 % Find GT file and its contents (GT)
 GT = zeros(0, 4);
@@ -571,6 +572,7 @@ else % GT exists
 end
 fclose(fileID);
 
+filename = img_names(present_frame).name;
 present_img = imread(strcat(pathname, filename));
         
         
