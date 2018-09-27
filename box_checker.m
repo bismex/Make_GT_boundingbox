@@ -1,3 +1,9 @@
+% Created by Seokeon Choi
+% Date : 2018 / 09 / 27
+% Github (open source) : https://github.com/bismex/Make_GT_boundingbox
+% Homepage : https://sites.google.com/site/seokeonchoi/
+% Usage : Please read the README file
+
 function varargout = box_checker(varargin)
 % BOX_CHECKER MATLAB code for box_checker.fig
 %      BOX_CHECKER, by itself, creates a new BOX_CHECKER or raises the existing
