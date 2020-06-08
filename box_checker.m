@@ -462,7 +462,13 @@ global present_rect;
 global folder_name;
 global total_frame;
 global step_size;
+% global fig1;
+% global fig2;
+% cla
+% clf
+cla reset;
 imshow(present_img, 'Parent', handles.image_input);
+% set(imgH, 'CData', x);
 name_frame_idx = [folder_name, ' ( ', num2str(present_frame), ' / ', num2str(total_frame), ' )'];
 set(handles.edit_frame_idx, 'String', name_frame_idx);
 
@@ -523,10 +529,8 @@ if ~prod(present_rect == 1)
         rectangle('Position',present_rect,'LineWidth',2,'EdgeColor','g');
     end
     fprintf(['[Flag bbox : ', flag_bbox, ']\n']);
-    crop_img = present_img(present_rect(2):present_rect(2)+present_rect(4), present_rect(1):present_rect(1)+present_rect(3), :);
-    imshow(crop_img, 'Parent', handles.image_input_detail);
+    fig2 = imshow(present_img(present_rect(2):present_rect(2)+present_rect(4), present_rect(1):present_rect(1)+present_rect(3), :), 'Parent', handles.image_input_detail);
 end
-
 % gui handles
 name_bbox = [num2str(present_rect(1)), ',', num2str(present_rect(2)), ',', num2str(present_rect(3)), ',', num2str(present_rect(4))];
 set(handles.edit_bbox, 'String', name_bbox);
@@ -592,6 +596,7 @@ function figure1_WindowKeyPressFcn(hObject, eventdata, handles)
 %	Modifier: name(s) of the modifier key(s) (i.e., control, shift) pressed
 % handles    structure with handles and user data (see GUIDATA)
 % disp(eventdata.Key)
+
 switch eventdata.Key
     case 'f', File_open_Callback(hObject, eventdata, handles);
     case 'w', push_w_Callback(hObject, eventdata, handles);
@@ -614,3 +619,5 @@ switch eventdata.Key
     case 'rightarrow', push_right_Callback(hObject, eventdata, handles);
     case 'space', push_save_Callback(hObject, eventdata, handles);
 end
+% clear all
+
